@@ -1,3 +1,77 @@
 * {
-    font-family: Helvetica;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:#FEFAED;
 }
+body {
+    background-color:#120904;
+    background-image: url("bg2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left;
+    background-size: 100vh;
+}
+body.work {
+    background-image: none;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: 10% 90%;
+    grid-template-areas:    
+            "head head head head head head head"
+            ".... .... .... cont cont cont cont" 
+}
+
+.header {
+    display: flex;
+    margin: 0%;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    letter-spacing: 1px;
+    grid-area: head;
+}
+
+.name-head {
+    color: white;
+    font-size: 35px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 20px;
+}
+
+.nav ul li a{
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.nav ul li a:hover{
+    color: #ECD0BC;
+    transition: 0.3;
+}
+
+.content-container{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: auto;
+    max-width: 50%;
+    grid-area: cont;
+}
+
+.content {
+    background-color: #120904
+}
+
+
