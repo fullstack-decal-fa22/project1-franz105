@@ -11,6 +11,7 @@ body {
     background-attachment: fixed;
     background-position: left;
     background-size: 100vh;
+    position: relative;
 }
 body.work {
     background-image: none;
@@ -19,11 +20,12 @@ body.work {
 .container {
     display: grid;
     height: 100vh;
-    grid-template-columns: repeat(7,1fr);
+    position: relative;
+    grid-template-columns: 55fr 45fr;
     grid-template-rows: 10% 90%;
     grid-template-areas:    
-            "head head head head head head head"
-            ".... .... .... cont cont cont cont"; 
+            "head head"
+            ".... cont"; 
 }
 
 .header {
@@ -36,6 +38,7 @@ body.work {
     grid-area: head;
 }
 
+/*name in header*/
 .name-head {
     color: white;
     font-size: 35px;
@@ -46,14 +49,16 @@ body.work {
 .nav ul li{
     list-style-type: none;
     display: inline-block;
-    padding: 10px 20px;
-    font-size: 20px;
+    padding-left: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: none;
+    font-size: 25px;
 }
 
 .nav ul li a{
     text-decoration: none;
-    font-weight: bold;
-    text-transform: capitalize;
+    font-weight:600;
 }
 
 .nav ul li a:hover{
@@ -61,30 +66,77 @@ body.work {
     transition: 0.3;
 }
 
+/*Button in header*/
+.button {
+    height: inherit;
+    background: none;
+    overflow: hidden;
+    font-size: inherit;
+    font-weight: bold;
+    border:none;
+}
+
+.button:hover {
+    color: #ECD0BC;
+    transition: 0.3;
+}
+
+.button-icon {
+    align-items: center;
+    height: 25px;
+}
+
+
+/*This is for the content*/
 .content-container{
     padding-top: 80px;
     padding-bottom: 80px;
     padding-left: 5%;
     padding-right: 5%;
-    width: 100%;
-    max-width: 50%;
+    width: 90%;
     grid-area: cont;
     position: relative;
-    opacity: 0.5;
+    background-color: rgba(37,17,8,0.10);
 }
 
 .content {
-    background-color: #120904;
     padding: 10px;
+    padding-top: 30%;
+    padding-bottom:30%;
     position: center;
-    font-family: playfair-display,serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 20px;
+    height: 50%;
+    width: 90%;
+    font-size: 25px;
 }
 
-#name {
-    font: inherit;
+.content #name {
+    font-family: playfair-display,serif;
+    font-weight: 700;
+    font-style: italic;
     font-size: 100px;
 }
 
+
+
+/* From here is for work.html*/
+.work .container {
+    display: grid;
+    height: 100vh;
+    position: relative;
+    grid-template-columns: 4fr 5fr 2fr;
+    grid-template-areas:    
+        "head head head" 
+        ".... work ...."; 
+}
+
+.work-content {
+    padding-top: 45%;
+    grid-area: work;
+}
+
+#loadingellipsis {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 100px;
+    font-style: italic;
+    text-align: justify;
+}
