@@ -123,7 +123,7 @@ body.work {
     display: grid;
     height: 100vh;
     position: relative;
-    grid-template-columns: 4fr 5fr 2fr;
+    grid-template-columns: 5fr 7fr 4fr;
     grid-template-areas:    
         "head head head" 
         ".... work ...."; 
